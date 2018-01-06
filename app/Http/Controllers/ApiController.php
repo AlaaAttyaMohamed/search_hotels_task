@@ -26,19 +26,17 @@ class ApiController extends Controller
       $response = [];
       $name     = request('name');
       $city     = request('city');
-      $price    = request('price');
-      $date     = request('date');
-      $price_from = isset($price[0]) ? $price[0] : '0';
-      $price_to  = isset($price[1]) ? $price[1] : '0';
-      $date_from = isset($date[0]) ? $date[0] : '00-00-0000';
-      $date_to = isset($date[1]) ? $date[1] : '00-00-0000';
+      $price_from = request('price_from');
+      $price_to  = request('price_to');
+      $date_from = request('date_from');
+      $date_to = request('date_to');
       foreach($hotels->hotels as $hotel)
       {
           if($hotel->name == $name || $hotel->city == $city || ($hotel->price >= $price_from && $hotel->price <= $price_to))
           {
             array_push($response,$hotel);
           }
-          if(isset($date))
+          if($date_from != null && $date_to != null)
           {
               foreach ($hotel->availability as $availability)
               {
