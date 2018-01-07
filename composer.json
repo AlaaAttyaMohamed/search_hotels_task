@@ -5,7 +5,7 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.5.9",
+        "php": ">=7.1",
         "laravel/framework": "5.2.*",
         "themsaid/laravel-model-transformers": "^1.0",
         "mnapoli/front-yaml": "^1.5",
@@ -15,7 +15,7 @@
         "anthonymartin/geo-location": "^1.0",
         "eventviva/php-image-resize": "^1.6",
         "doctrine/dbal": "^2.5",
-        "maatwebsite/excel": "^2.1" 
+        "maatwebsite/excel": "^2.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
